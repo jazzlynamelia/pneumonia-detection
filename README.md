@@ -98,3 +98,26 @@ This project implements a **hybrid deep learning and ensemble learning model** f
 | CNN-BoostForest vs CNN-XGBoost      | 9  | 5  | 0.6429       | 0.42268      | Not significant |
 | CNN-BoostForest vs CNN-LightGBM     | 7  | 5  | 0.0833       | 0.77283      | Not significant |
 
+---
+
+## Tools & Libraries
+
+- **Python 3.10+**  
+- **Deep Learning:** TensorFlow, Keras (CNN, DenseNet201)
+- **Ensemble & ML:** scikit-learn (Random Forest, ExtraTrees), XGBoost, LightGBM, BoostForest
+- **Data Processing:** NumPy, Pandas  
+- **Visualization:** Matplotlib, Seaborn  
+
+---
+
+## How to Run
+
+Since this project was developed in **Google Colab**, you can run it without setting up a local environment:
+
+1. Open [Google Colab](https://colab.research.google.com/)  
+2. Click **File > Open notebook > GitHub**  
+3. Enter this repository URL: `[https://github.com/yourusername/pneumonia-detection](https://github.com/jazzlynamelia/pneumonia-detection/)`  
+4. Select the notebook you want to run (`Pneumonia_CNN.ipynb` or `Pneumonia_CNN_Hybrid.ipynb`)  
+5. Run the notebook step by step  
+
+> Note: All dependencies are already available in Colab. If you want to run locally, install the required packages using `pip install tensorflow keras scikit-learn xgboost lightgbm matplotlib seaborn pandas numpy`.
