@@ -1,7 +1,7 @@
 # CNN-BoostForest: A Synergistic Approach for Pneumonia Detection
 
-**Repository:** [Pneumonia Detection](https://github.com/yourusername/pneumonia-detection)  
 **Authors:** Jazzlyn Amelia Lim, Cindy Noveiren
+**Publication:** ICORIS 2025 - International Conference
 
 ---
 
@@ -30,8 +30,11 @@ This project implements a **hybrid deep learning and ensemble learning model** f
 
 ## Methodology
 
+**Workflow:**  
 ![Methodology Workflow](assets/methodology_workflow.png)
 
+**DenseNet201 Feature Extractor:**  
 ![DenseNet201 Feature Extractor](assets/densenet201_feature_extractor.png)
 
+**BoostForest Architecture:**  
 ![BoostForest Architecture](assets/boostforest_architecture.png)
