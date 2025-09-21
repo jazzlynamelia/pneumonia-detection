@@ -1,6 +1,7 @@
 # CNN-BoostForest: A Synergistic Approach for Pneumonia Detection
 
 **Authors:** Jazzlyn Amelia Lim, Cindy Noveiren
+
 **Publication:** ICORIS 2025 - International Conference
 
 ---
@@ -17,27 +18,36 @@ This project implements a **hybrid deep learning and ensemble learning model** f
 **Highlights:**
 - Achieved **93.95% accuracy**, **94.03% precision**, **F1-score 93.95%**, **AUC 0.97**  
 - Hybrid CNN-BoostForest outperforms CNN end-to-end and is competitive with other CNN-hybrid models  
-- Computationally heavier but offers strong predictive stability  
+- Computationally heavier but offers strong predictive stability with practical inference time
 
 ---
 
 ## Notebooks
 
-1. **`Pneumonia_CNN.ipynb`** – End-to-end CNN training and evaluation  
-2. **`Pneumonia_CNN_Hybrid.ipynb`** – Hybrid CNN ensemble models training, evaluation, and comparison  
+1. `Pneumonia_CNN.ipynb` – End-to-end CNN training and evaluation  
+2. `Pneumonia_CNN_Hybrid.ipynb` – Hybrid CNN ensemble models training, evaluation, and comparison  
 
 ---
 
 ## Methodology
 
 **Workflow:**  
-![Methodology Workflow](assets/methodology_workflow.png)
+<a href="assets/methodology_workflow.png">
+  <img src="assets/methodology_workflow.png" alt="Methodology Workflow" width="980"/>
+</a>
 
-**DenseNet201 Feature Extractor:**  
-![DenseNet201 Feature Extractor](assets/densenet201_feature_extractor.png)
-
-**BoostForest Architecture:**  
-![BoostForest Architecture](assets/boostforest_architecture.png)
+<table>
+  <tr>
+    <td align="center">
+      <b>CNN (DenseNet201 Feature Extractor)</b><br>
+      <img src="assets/densenet201_feature_extractor.png" alt="DenseNet201 Feature Extractor" width="450"/>
+    </td>
+    <td align="center">
+      <b>BoostForest Architecture</b><br>
+      <img src="assets/boostforest_architecture.png" alt="BoostForest Architecture" width="450"/>
+    </td>
+  </tr>
+</table>
 
 **BoostForest Key Features:**
 - Combines **bagging & boosting** in parallel  
@@ -56,6 +66,8 @@ This project implements a **hybrid deep learning and ensemble learning model** f
 
 ## Results
 
+**Summary:** CNN-BoostForest achieves the best balance of precision and recall among tested models (Precision **94.03%**, AUC **0.97**), and consistently outperforms the CNN end-to-end baseline. Although several hybrid models reach similar accuracy, BoostForest gives a slight edge in precision — important for reducing false positives in clinical settings.
+
 ### Model Performance Comparison
 
 | No | Model            | Accuracy (%) | Precision (%) | Recall (%) | F1-Score (%) |
@@ -68,6 +80,7 @@ This project implements a **hybrid deep learning and ensemble learning model** f
 | 6  | **CNN-BoostForest** | **93.95** | **94.03**     | **93.95**  | **93.95**    |
 
 ### Computational Cost
+**Computational trade-off:** CNN-BoostForest requires substantially longer training time and higher memory, but maintains practical inference latency (~8.7 ms/image), making it suitable for batch or near-real-time inference despite higher training cost.
 
 | No | Model            | Training Time (s) | Inference Time / Image (ms) | Model Size (MB) | Peak Memory (MB) |
 |----|------------------|--------------------|-----------------------------|-----------------|------------------|
@@ -78,15 +91,24 @@ This project implements a **hybrid deep learning and ensemble learning model** f
 | 5  | CNN End-to-End   | 25218.5           | 375.77                      | 91.34           | 208.37           |
 | 6  | **CNN-BoostForest** | **26286.7**    | **8.67**                    | **85.72**       | **184.85**       |
 
-![Computational Cost](assets/computational_cost.png)
+<!-- Image: clickable resized version -->
+<a href="assets/computational_cost.png">
+  <img src="assets/computational_cost.png" alt="Computational Cost" width="900"/>
+</a>
 
 ### Confusion Matrix
-
-![Confusion Matrices](assets/confusion_matrix_all.png)
+<table>
+  <tr>
+    <td><img src="assets/confusion_matrix_all.png" alt="Confusion Matrix" width="900"/></td>
+  </tr>
+</table>
 
 ### ROC AUC
-
-![ROC AUC Curves](assets/roc_auc.png)
+<table>
+  <tr>
+    <td><img src="assets/roc_auc.png" alt="ROC AUC" width="720"/></td>
+  </tr>
+</table>
 
 ### McNemar's Test
 
@@ -116,7 +138,7 @@ Since this project was developed in **Google Colab**, you can run it without set
 
 1. Open [Google Colab](https://colab.research.google.com/)  
 2. Click **File > Open notebook > GitHub**  
-3. Enter this repository URL: `[https://github.com/yourusername/pneumonia-detection](https://github.com/jazzlynamelia/pneumonia-detection/)`  
+3. Enter this repository URL: [https://github.com/jazzlynamelia/pneumonia-detection/](https://github.com/jazzlynamelia/pneumonia-detection/)
 4. Select the notebook you want to run (`Pneumonia_CNN.ipynb` or `Pneumonia_CNN_Hybrid.ipynb`)  
 5. Run the notebook step by step  
 
