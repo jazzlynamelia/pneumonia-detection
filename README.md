@@ -1,7 +1,4 @@
 # CNN-BoostForest: A Synergistic Approach for Pneumonia Detection
-
-**Authors:** Jazzlyn Amelia Lim, Cindy Noveiren
-
 **Publication:** ICORIS 2025 - International Conference
 
 ---
